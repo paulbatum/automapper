@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDF551F9-B27D-4283-BFA0-E7068E05967D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoMapper</RootNamespace>
+    <AssemblyName>AutoMapper</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>AutoMapper.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AutomatedDebug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\build\Debug\AutoMapper\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinFu.DynamicProxy, Version=1.0.3233.18231, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\LinFu.DynamicProxy\3.5\Release\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AutoMapperMappingException.cs" />
+    <Compile Include="IMappingEngineRunner.cs" />
+    <Compile Include="INamingConvention.cs" />
+    <Compile Include="Internal\DeferredInstantiatedConverter.cs" />
+    <Compile Include="Internal\DelegateFactory.cs" />
+    <Compile Include="Internal\ITypeMapFactory.cs" />
+    <Compile Include="Internal\PropertyBehaviorInterceptor.cs" />
+    <Compile Include="Internal\DefaultResolver.cs" />
+    <Compile Include="Internal\DeferredInstantiatedFormatter.cs" />
+    <Compile Include="Internal\DeferredInstantiatedResolver.cs" />
+    <Compile Include="Internal\ExpressionValueFormatter.cs" />
+    <Compile Include="Internal\FieldGetter.cs" />
+    <Compile Include="Internal\FormatterCtorExpression.cs" />
+    <Compile Include="IFormatterConfiguration.cs" />
+    <Compile Include="Internal\MemberGetter.cs" />
+    <Compile Include="Internal\MethodGetter.cs" />
+    <Compile Include="Internal\PropertyGetter.cs" />
+    <Compile Include="IMemberGetter.cs" />
+    <Compile Include="Internal\PropertyNameResolver.cs" />
+    <Compile Include="Internal\TypePair.cs" />
+    <Compile Include="IObjectMapper.cs" />
+    <Compile Include="ISelfProfiler.cs" />
+    <Compile Include="AutoMapperConfigurationException.cs" />
+    <Compile Include="ITypeConverter.cs" />
+    <Compile Include="Mapper.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Internal\EnumerableExtensions.cs" />
+    <Compile Include="Internal\FormatterExpression.cs" />
+    <Compile Include="IConfigurationProvider.cs" />
+    <Compile Include="IFormatterExpression.cs" />
+    <Compile Include="IMappingEngine.cs" />
+    <Compile Include="IMappingExpression.cs" />
+    <Compile Include="IValueFormatter.cs" />
+    <Compile Include="IValueResolver.cs" />
+    <Compile Include="Mappers\ArrayMapper.cs" />
+    <Compile Include="Mappers\DataReaderMapper.cs" />
+    <Compile Include="Mappers\FlagsEnumMapper.cs" />
+    <Compile Include="Mappers\DictionaryMapper.cs" />
+    <Compile Include="Mappers\EnumerableMapper.cs" />
+    <Compile Include="Mappers\EnumerableMapperBase.cs" />
+    <Compile Include="Mappers\EnumMapper.cs" />
+    <Compile Include="Mappers\AssignableMapper.cs" />
+    <Compile Include="Mappers\ITypeMapObjectMapper.cs" />
+    <Compile Include="Mappers\MapperRegistry.cs" />
+    <Compile Include="Mappers\NullableMapper.cs" />
+    <Compile Include="Mappers\ObjectCreator.cs" />
+    <Compile Include="Mappers\StringMapper.cs" />
+    <Compile Include="Mappers\TypeConverterMapper.cs" />
+    <Compile Include="Mappers\TypeHelper.cs" />
+    <Compile Include="Mappers\TypeMapMapper.cs" />
+    <Compile Include="Mappers\TypeMapObjectMapperRegistry.cs" />
+    <Compile Include="MappingEngine.cs" />
+    <Compile Include="Internal\MappingExpression.cs" />
+    <Compile Include="Internal\DelegateBasedResolver.cs" />
+    <Compile Include="Internal\NullReplacementMethod.cs" />
+    <Compile Include="Internal\PrimitiveExtensions.cs" />
+    <Compile Include="Profile.cs" />
+    <Compile Include="PropertyMap.cs" />
+    <Compile Include="Internal\ReflectionHelper.cs" />
+    <Compile Include="ResolutionContext.cs" />
+    <Compile Include="Internal\ResolutionExpression.cs" />
+    <Compile Include="ResolutionResult.cs" />
+    <Compile Include="SelfProfiler.cs" />
+    <Compile Include="TypeInfo.cs" />
+    <Compile Include="TypeMap.cs" />
+    <Compile Include="Internal\TypeMapFactory.cs" />
+    <Compile Include="Internal\ValueFormatter.cs" />
+    <Compile Include="ValueResolver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AutoMapper.snk" />
+    <None Include="SemanticModel.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
